@@ -1,0 +1,351 @@
+/* TaliCompanion site styles
+   Mirrors the iOS app's design system: warm-charcoal dark theme,
+   ambient gradient glows, Bricolage Grotesque display + Inter Tight body,
+   and the hero gradient (warm orange → red) for accents. */
+
+:root {
+  /* Palette — matches Tali.Palette in the iOS app. */
+  --bg-0: #1c1813;        /* warm charcoal */
+  --bg-1: #25201a;
+  --bg-2: #2f2922;
+  --fg-0: #f5f1ea;        /* off-white text */
+  --fg-1: #b8b1a4;
+  --fg-2: #847f74;
+  --stroke-1: rgba(255, 255, 255, 0.08);
+
+  /* Accents — hero gradient stops + brand glow. */
+  --accent: #ff3d5a;
+  --accent-warm: #ffb07a;
+  --accent-orange: #ff8a5c;
+  --accent-deep: #b81a3e;
+  --glow-purple: #8e7bff;
+
+  /* Type stacks. The variable axis on Bricolage gets us optical sizing
+     so the display font reads cleanly at both 48px and 18px. */
+  --font-display: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter Tight", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-0);
+  color: var(--fg-0);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----- Ambient glow blobs ----- */
+/* Anchored to viewport corners, fixed so they don't scroll with content.
+   Same effect as `AmbientGlowBlob` in the SwiftUI app. */
+.glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  border-radius: 50%;
+}
+.glow-pink {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  top: -180px;
+  right: -160px;
+  opacity: 0.20;
+}
+.glow-purple {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, var(--glow-purple) 0%, transparent 70%);
+  bottom: -120px;
+  left: -120px;
+  opacity: 0.16;
+}
+
+/* ----- Header ----- */
+.site-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 24px 8px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--bg-1);
+  border: 1px solid var(--stroke-1);
+  color: var(--accent);
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    var(--accent-orange),
+    var(--accent),
+    var(--accent-deep)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+}
+.site-header nav a {
+  color: var(--fg-1);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 150ms ease-out;
+}
+.site-header nav a:hover {
+  color: var(--fg-0);
+}
+
+/* ----- Content ----- */
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.content h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 32px 0 18px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffe4d6 60%,
+    var(--accent-warm) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 56px 0 14px;
+  color: var(--fg-0);
+}
+.content h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 32px 0 8px;
+  color: var(--fg-0);
+}
+
+.content p,
+.content li {
+  color: var(--fg-1);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.content > em:first-of-type,
+.content > p > em:first-child {
+  /* "Last updated: …" italic line — render as a quiet caption. */
+  font-style: normal;
+  color: var(--fg-2);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.content strong {
+  color: var(--fg-0);
+  font-weight: 600;
+}
+
+.content a {
+  color: var(--accent-warm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 150ms ease-out;
+}
+.content a:hover {
+  color: var(--accent);
+}
+
+.content code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--fg-0);
+}
+
+.content blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+  margin: 24px 0;
+  color: var(--fg-1);
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--stroke-1);
+  margin: 56px 0 32px;
+}
+
+/* Lists with brand-accent dots instead of disc bullets. */
+.content ul {
+  padding-left: 0;
+  list-style: none;
+}
+.content ul li {
+  position: relative;
+  padding-left: 22px;
+  margin: 10px 0;
+}
+.content ul li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.85;
+}
+.content ol {
+  padding-left: 22px;
+}
+.content ol li {
+  margin: 10px 0;
+  padding-left: 4px;
+}
+.content ol li::marker {
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+/* ----- Buttons / CTAs ----- */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 40px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
+  border: 1px solid transparent;
+}
+.cta:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.cta-primary {
+  background: linear-gradient(
+    135deg,
+    var(--accent-orange) 0%,
+    var(--accent) 60%,
+    var(--accent-deep) 100%
+  );
+  color: #fff !important;
+  box-shadow: 0 6px 24px rgba(255, 61, 90, 0.20);
+}
+
+.cta-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--fg-0) !important;
+  border: 1px solid var(--stroke-1);
+}
+
+.cta-disabled {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--fg-2) !important;
+  border: 1px solid var(--stroke-1);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ----- Footer ----- */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  border-top: 1px solid var(--stroke-1);
+  margin-top: 32px;
+}
+.site-footer p {
+  color: var(--fg-2);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 600px) {
+  .content h1 { font-size: 40px; }
+  .content h2 { font-size: 22px; margin-top: 40px; }
+  .content { padding: 16px 18px 48px; }
+  .site-header { padding: 18px; }
+  .site-header nav { gap: 18px; }
+  .site-header nav a { font-size: 13px; }
+  .glow-pink { width: 320px; height: 320px; }
+  .glow-purple { width: 240px; height: 240px; }
+}

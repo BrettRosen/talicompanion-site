@@ -1,0 +1,13 @@
+title: TaliCompanion
+description: Your match log for Flesh and Blood on Talishar.
+url: https://brettrosen.github.io
+baseurl: /talicompanion-site
+
+# We provide our own layout in `_layouts/default.html`. No Jekyll theme.
+theme: null
+plugins: []
+
+# Markdown rendering — kramdown is GitHub Pages' default, kept explicit.
+markdown: kramdown
+kramdown:
+  hard_wrap: false

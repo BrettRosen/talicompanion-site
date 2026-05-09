@@ -1,3 +1,9 @@
+---
+layout: default
+title: TaliCompanion
+description: Your match log for Flesh and Blood on Talishar.
+---
+
 # TaliCompanion
 
 _Your match log for Flesh and Blood on Talishar._
@@ -5,6 +11,11 @@ _Your match log for Flesh and Blood on Talishar._
 TaliCompanion is a free Chrome extension and iOS companion app that
 captures every game you play on [Talishar.net](https://talishar.net)
 so you can replay, study, and watch your rating climb.
+
+<div class="cta-row">
+  <a class="cta cta-primary" href="https://chromewebstore.google.com/">Get the Chrome extension</a>
+  <span class="cta cta-disabled">iOS app · coming soon</span>
+</div>
 
 ## What it does
 
@@ -17,15 +28,13 @@ so you can replay, study, and watch your rating climb.
   actually play with.
 - **Home-screen widget.** Recent results at a glance.
 
-## Get it
+## How it works
 
-- **Chrome extension** — captures your games while you play. Available
-  on the [Chrome Web Store](https://chromewebstore.google.com/).
-- **iOS app** — browse your match history, watch replays, follow
-  friends. Available on the App Store *(coming soon)*.
-
-The Chrome extension is the source of truth for capturing games. The
-iOS app is your read-only window into the data you've saved.
+The Chrome extension is the source of truth for capturing games — it
+runs in the background while you play on Talishar.net and saves each
+completed match to your account. The iOS app is your read-only window
+into that history, with replay, charts, and social features layered on
+top.
 
 ## Links
 
@@ -41,9 +50,3 @@ iOS app is your read-only window into the data you've saved.
 ## Contact
 
 Questions? Email **talicompanion.support@gmail.com**.
-
----
-
-TaliCompanion is not affiliated with or endorsed by Legend Story
-Studios, Talishar, Google, or Apple. Flesh and Blood is a trademark of
-Legend Story Studios.

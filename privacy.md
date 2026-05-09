@@ -1,4 +1,10 @@
-# TaliCompanion Privacy Policy
+---
+layout: default
+title: TaliCompanion · Privacy Policy
+description: What TaliCompanion collects, what we don't, and how to delete your data.
+---
+
+# Privacy Policy
 
 _Last updated: May 9, 2026_
 
@@ -108,7 +114,3 @@ and note the change in the Chrome Web Store listing.
 Questions, access requests, or deletion requests:
 **talicompanion.support@gmail.com**.
 
----
-
-TaliCompanion is not affiliated with or endorsed by Legend Story
-Studios, Talishar, Google, or Apple.

@@ -1,4 +1,10 @@
-# TaliCompanion Support
+---
+layout: default
+title: TaliCompanion · Support
+description: Help, bug reports, feature requests, and account questions.
+---
+
+# Support
 
 _Last updated: May 9, 2026_
 
@@ -78,7 +84,3 @@ collect any.
 - [Flesh and Blood](https://fabtcg.com/) — the trading card game by
   Legend Story Studios
 
----
-
-TaliCompanion is not affiliated with or endorsed by Legend Story
-Studios, Talishar, Google, or Apple.
