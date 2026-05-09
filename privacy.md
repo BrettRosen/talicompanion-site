@@ -1,6 +1,6 @@
 # TaliCompanion Privacy Policy
 
-_Last updated: April 23, 2026_
+_Last updated: May 9, 2026_
 
 TaliCompanion is a Chrome extension and companion iOS app that records
 Flesh and Blood games played on [Talishar.net](https://talishar.net) so
@@ -11,10 +11,14 @@ Questions or deletion requests: **talicompanion.support@gmail.com**.
 
 ## 1. Data we collect
 
-**Account information.** When you sign in, Google Sign-In shares your
-email address, name, profile picture, and a Google account identifier.
-We use this to create and identify your TaliCompanion account. We never
-see your Google password.
+**Account information.** You can sign in with Google (in the Chrome
+extension and iOS app) or with Apple (in the iOS app). The provider
+shares your email address, your name, and a stable account identifier
+with us, which we use to create and identify your TaliCompanion
+account. If you sign in with Apple and use "Hide My Email," only
+Apple's private relay address is shared. We never see your password.
+We do **not** request, store, or display your profile picture from
+either provider.
 
 **Talishar identity.** While you are signed in to both TaliCompanion and
 Talishar in the same browser, the extension reads your Talishar handle
@@ -53,9 +57,8 @@ processes data on our behalf as our cloud provider. See
 
 - **You** can see all of your own data in the TaliCompanion iOS app.
 - **Other signed-in TaliCompanion users** can see your TaliCompanion
-  username, Talishar handle, display name, profile picture, and current
-  rating so they can add you as a friend or view your rating as their
-  opponent.
+  username, Talishar handle, display name, and current rating so they
+  can add you as a friend or view your rating as their opponent.
 - **Opponents** in games you save cannot see those saves. Your saved
   games live under your account only.
 - **We** (the TaliCompanion maintainers) have administrative access for
@@ -65,9 +68,11 @@ processes data on our behalf as our cloud provider. See
 ## 5. Third parties
 
 TaliCompanion uses Google / Firebase for authentication and data
-storage, and reads Talishar's own public login endpoint to learn your
-Talishar handle. The extension does not send any TaliCompanion data to
-Talishar or to any other third party.
+storage, Apple's Sign in with Apple service for iOS authentication,
+and reads Talishar's own public login endpoint to learn your Talishar
+handle. The extension and iOS app do not send any TaliCompanion data
+to Talishar or to any other third party. We do not run advertising,
+analytics, or crash-reporting SDKs.
 
 ## 6. Your rights
 
@@ -77,9 +82,11 @@ Talishar or to any other third party.
   delete it in the iOS app after saving.
 - **Reset your stats** — Settings → Reset All Stats in the iOS app
   deletes every saved game, win/loss record, and rating.
-- **Delete your account** — email **talicompanion.support@gmail.com**
-  and we will delete your account and all associated data within 30
-  days.
+- **Delete your account** — in the iOS app, go to You → Settings →
+  Delete account. This immediately removes every game, rating, friend
+  edge, and your sign-in record. Or email
+  **talicompanion.support@gmail.com** and we will delete your account
+  and all associated data within 30 days.
 
 ## 7. Retention
 
@@ -104,4 +111,4 @@ Questions, access requests, or deletion requests:
 ---
 
 TaliCompanion is not affiliated with or endorsed by Legend Story
-Studios, Talishar, or Google.
+Studios, Talishar, Google, or Apple.
