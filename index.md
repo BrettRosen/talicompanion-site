@@ -13,7 +13,7 @@ captures every game you play on [Talishar.net](https://talishar.net)
 so you can replay, study, and watch your rating climb.
 
 <div class="cta-row">
-  <a class="cta cta-primary" href="https://chromewebstore.google.com/">Get the Chrome extension</a>
+  <a class="cta cta-primary" href="https://chromewebstore.google.com/detail/talicompanion/gpbcbpadelbbbbdhehpkolidlgpnkgci?hl=en&authuser=0">Get the Chrome extension</a>
   <a class="cta cta-secondary" href="https://apps.apple.com/us/app/talicompanion/id6767906962">Get the iOS app</a>
 </div>
 
