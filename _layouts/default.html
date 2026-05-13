@@ -22,12 +22,8 @@
 
   <header class="site-header">
     <a class="brand" href="{{ '/' | relative_url }}">
-      <span class="brand-mark" aria-hidden="true">
-        <!-- Stylized SF "gamecontroller.fill" silhouette to mirror the app's BrandMark. -->
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M6 8h12a4 4 0 0 1 4 4v4a4 4 0 0 1-7.2 2.4L13 16h-2l-1.8 2.4A4 4 0 0 1 2 16v-4a4 4 0 0 1 4-4zm0 5h2v-2h2v2h2v2H10v2H8v-2H6v-2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm2 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-        </svg>
-      </span>
+      <img class="brand-mark" src="{{ '/assets/logo.png' | relative_url }}" alt="" aria-hidden="true">
+
       <span class="brand-name">TaliCompanion</span>
     </a>
     <nav>

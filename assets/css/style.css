@@ -93,15 +93,11 @@ body {
   text-decoration: none;
 }
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: 32px;
   height: 32px;
   border-radius: 9px;
-  background: var(--bg-1);
-  border: 1px solid var(--stroke-1);
-  color: var(--accent);
+  object-fit: contain;
 }
 .brand-name {
   font-family: var(--font-display);
