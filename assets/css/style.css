@@ -13,11 +13,12 @@
   --fg-2: #847f74;
   --stroke-1: rgba(255, 255, 255, 0.08);
 
-  /* Accents — hero gradient stops + brand glow. */
-  --accent: #ff3d5a;
+  /* Accents — hero gradient stops + brand glow. Mirrors the iOS
+     design tokens in `Theme.swift` and `colors_and_type.css`. */
+  --accent: #a6121c;
   --accent-warm: #ffb07a;
-  --accent-orange: #ff8a5c;
-  --accent-deep: #b81a3e;
+  --accent-orange: #ff6a1f;
+  --accent-deep: #2b0509;
   --glow-purple: #8e7bff;
 
   /* Type stacks. The variable axis on Bricolage gets us optical sizing

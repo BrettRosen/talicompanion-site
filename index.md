@@ -14,7 +14,7 @@ so you can replay, study, and watch your rating climb.
 
 <div class="cta-row">
   <a class="cta cta-primary" href="https://chromewebstore.google.com/">Get the Chrome extension</a>
-  <span class="cta cta-disabled">iOS app · coming soon</span>
+  <a class="cta cta-secondary" href="https://apps.apple.com/us/app/talicompanion/id6767906962">Get the iOS app</a>
 </div>
 
 ## What it does
